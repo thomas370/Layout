@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/4f3983531c.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>header_responsive</title>
+</head>
+<body>
+<div id="root">
+  <div id="topnav" class="topnav">
+    <a id="home_link" class="topnav_link" href="#">HOME</a>
+
+    <!-- Classic Menu -->
+    <nav role="navigation" id="topnav_menu">
+      <ul id="deroulant">
+          <li><a class="topnav_link" href="#">TOURNAMENT</a>
+            <ul>
+                <li><a href="#">CREATE</a></li>
+                <li><a href="#">FIND</a></li>
+                <li><a href="#">IN RUNNING</a></li>
+            </ul>
+          </li>
+            <li><a class="#" href="#">TEAMS</a>
+                <ul>
+                  <li><a href="#">CREATE</a></li>
+                  <li><a href="#">FIND</a></li>
+              </ul>
+            </li>
+
+            <li><a class="topnav_link" href="#">CONTACT</a></li>
+            <li><a class="barre"> | </a></li>
+            <li><a href="#"><i class="fa-solid fa-user-plus"></i></i></a></li>
+      </ul>
+    </nav>
+
+    <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+      <!-- Some spans to act as a hamburger -->
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+
+    <!-- Responsive Menu -->
+    <nav role="navigation" id="topnav_responsive_menu">
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/about">ABOUT</a></li>
+        <li><a href="/contact-us">CONTACT</a></li>
+        <li><a href="/privacy-policy">PRIVACY POLICY</a></li>
+        <li><a href="/terms-and-conditions">TERMS AND CONDITIONS</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+</body>
+
+<script>
+function showResponsiveMenu() {
+  var menu = document.getElementById("topnav_responsive_menu");
+  var icon = document.getElementById("topnav_hamburger_icon");
+  var root = document.getElementById("root");
+  if (menu.className === "") {
+    menu.className = "open";
+    icon.className = "open";
+    root.style.overflowY = "hidden";
+  } else {
+    menu.className = "";                    
+    icon.className = "";
+    root.style.overflowY = "";
+  }
+}
+</script>
+</html>
